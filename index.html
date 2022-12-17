@@ -8,6 +8,14 @@
 <body>
 
     <h1>Let the fun begin</h1>
+    <div class="user-profile">
+      <h1>{{ user.name }}</h1>
+      <p>{{ user.bio }}</p>
+      <ul>
+        <li><strong>Location:</strong> {{ user.location }}</li>
+        <li><strong>Website:</strong> <a href="{{ user.website }}">{{ user.website }}</a></li>
+      </ul>
+    </div>
 
 </body>
 </html>
