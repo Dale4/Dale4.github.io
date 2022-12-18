@@ -69,7 +69,7 @@
 					// Request was successful
 					var xml = xhr.responseXML;
 					var data = xml.getElementsByTagName('root')[0];
-                    var firstname = xml.getElementsByTagName('root\profile\name\first');
+                    var firstname = xml.getElementsByTagName('root\profile\name\first')[0];
 					document.getElementById('myid').innerHTML = data.textContent;
 					document.getElementById('username').innerHTML = firstname;
 				}
