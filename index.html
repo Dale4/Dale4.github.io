@@ -20,7 +20,7 @@
 				<div class="row">
 					<div class="col-12">
 						<header id="header">
-							<h1>YESSSS</h1>
+							<h1>OKKKKK</h1>
 							<nav id="nav">
 								<a href="index.html" class="current-page-item">Homepage</a>
 								<a href="Resume.html">Resume</a>
@@ -42,7 +42,7 @@
 				<div id="banner">
 					<h2 id="myid"></h2>
 					<h2 id="username"></h2>
-					<h2>Put something cool here!!!!</h2>
+					<h2>Put something cool here</h2>
 					<span>And put something almost as cool here, but a bit longer ...</span>
 				</div>
 
@@ -71,7 +71,7 @@
 					var data = xml.getElementsByTagName('root')[0];
                     var firstname = xml.getElementsByTagName('first')[0];
 					document.getElementById('myid').innerHTML = data.textContent;
-					document.getElementById('username').innerHTML = firstname.nodeValue;
+					document.getElementById('username').innerHTML = firstname.childNodes[0].nodeValue;
 					
     //var x2 = xmlDoc.getElementsByTagName('title')[1];
     //var y2 = x2.childNodes[0];
