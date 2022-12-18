@@ -20,7 +20,7 @@
 				<div class="row">
 					<div class="col-12">
 						<header id="header">
-							<h1>let content</h1>
+							<h1>YESSSS</h1>
 							<nav id="nav">
 								<a href="index.html" class="current-page-item">Homepage</a>
 								<a href="Resume.html">Resume</a>
@@ -41,6 +41,7 @@
 
 				<div id="banner">
 					<h2 id="myid"></h2>
+					<h2 id="username"></h2>
 					<h2>Put something cool here!!!!</h2>
 					<span>And put something almost as cool here, but a bit longer ...</span>
 				</div>
@@ -50,7 +51,6 @@
 
 
 		<script>
-			myid.textContent = 'yes';
 			// Create an instance of the XMLHttpRequest object
 			var xhr = new XMLHttpRequest();
 
@@ -69,9 +69,12 @@
 					// Request was successful
 					var xml = xhr.responseXML;
 					var data = xml.getElementsByTagName('root')[0];
-                    document.getElementById('myid').innerHTML = data.textContent;
-					
-				} else {
+                    var firstname = xml.getElementsByTagName('root\profile\name\first');
+					document.getElementById('myid').innerHTML = data.textContent;
+					document.getElementById('username').innerHTML = firstname;
+				}
+				else
+				{
 					// Request failed
 					console.error(xhr.statusText);
 				}
