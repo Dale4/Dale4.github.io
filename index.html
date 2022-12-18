@@ -13,51 +13,17 @@
 </head>
 
 <body>
-	<div id="xml-data"></div>
-	<script>
-		// Create an instance of the XMLHttpRequest object
-		var xhr = new XMLHttpRequest();
-
-		// Set the HTTP method, URL, and asynchronous flag
-		xhr.open('GET', 'data.xml', true);
-
-		// Set the response type
-		xhr.responseType = 'document';
-
-		// Send the request
-		xhr.send();
-
-		// Process the response
-		xhr.onload = function () {
-			if (xhr.status >= 200 && xhr.status < 300) {
-				// Request was successful
-				var xml = xhr.responseXML;
-				var data = xml.getElementsByTagName('data')[0];
-				document.getElementById('xml-data').innerHTML = data.textContent;
-			} else {
-				// Request failed
-				console.error(xhr.statusText);
-			}
-		};
-
-		xhr.onerror = function () {
-			console.error(xhr.statusText);
-		};
-	</script>
-
 	<div id="page-wrapper">
-
 		<!-- Header -->
 		<div id="header-wrapper">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-
 						<header id="header">
-							<h1><a href="index.html" id="logo">Dale O'Neill</a></h1>
+							<h1>let content</h1>
 							<nav id="nav">
 								<a href="index.html" class="current-page-item">Homepage</a>
-								<a href="Resume.html">Resume Yes</a>
+								<a href="Resume.html">Resume</a>
 								<a href="twocolumn1.html">Two Column #1</a>
 								<a href="onecolumn.html">One Column</a>
 								<a href="threecolumn.html">Three Column</a>
@@ -70,16 +36,53 @@
 		</div>
 
 		<!-- Banner -->
-		<div id="banner-wrapper">
+		<div id="divbanner">
 			<div class="container">
 
 				<div id="banner">
-					<h2>Put something cool here!</h2>
+					<h2 id="myid"></h2>
+					<h2>Put something cool here!!!!</h2>
 					<span>And put something almost as cool here, but a bit longer ...</span>
 				</div>
 
 			</div>
 		</div>
+
+
+		<script>
+			divbanner.textContent = 'yes';
+			// Create an instance of the XMLHttpRequest object
+			var xhr = new XMLHttpRequest();
+
+			// Set the HTTP method, URL, and asynchronous flag
+			xhr.open('GET', 'data.xml', true);
+
+			// Set the response type
+			xhr.responseType = 'document';
+
+			// Send the request
+			xhr.send();
+
+			// Process the response
+			xhr.onload = function () {
+				if (xhr.status >= 200 && xhr.status < 300) {
+					// Request was successful
+					var xml = xhr.responseXML;
+					var data = xml.getElementsByTagName('root')[0];
+                    document.getElementById('myid').innerHTML = data.textContent;
+					
+				} else {
+					// Request failed
+					console.error(xhr.statusText);
+				}
+			};
+
+			xhr.onerror = function () {
+				console.error(xhr.statusText);
+			};
+		</script>
+
+
 
 		<!-- Main -->
 		<div id="main">
