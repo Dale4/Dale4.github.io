@@ -3,8 +3,53 @@
 	<profile>
 		<name>
 			<first>Dale</first>
-			<middle>P</middle>
 			<last>ONeill</last>
 		</name>
 	</profile>
+	<skills>
+		<platforms>
+			<os>windows</os>
+			<os>linux</os>
+		</platforms>
+		<languages>
+			<item>CPP</item>
+			<item>Python</item>
+			<item>C#</item>
+		</languages>
+		<apis>
+			<item>rest</item>
+			<item>graphql</item>
+			<item>gRPC</item>
+		</apis>
+		<containers>
+			<item>docker</item>
+			<item>kubernetes</item>
+			<item>swarm</item>
+			<item>microservices</item>
+		</containers>
+		<ui>
+			<item>Web Assembly</item>
+			<item>HTML</item>
+			<item>javascript</item>
+		</ui>
+		<server>
+			<item>asp.net core</item>
+			<item></item>
+			<item>javascript</item>
+		</server>
+		<projectmanagement>
+			<item>Software Defined Life Cycle</item>
+			<item>Agile</item>
+			<item>Jira</item>
+			<item>GitHub</item>
+		</projectmanagement>
+		<leadership>
+			<item>technical lead</item>
+			<item>Manager</item>
+		</leadership>
+		<cloud>
+			<item>AWS</item>
+			<item>AZure</item>
+		</cloud>
+	</skills>
 </root>

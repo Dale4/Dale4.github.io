@@ -40,8 +40,11 @@
 			<div class="container">
 
 				<div id="banner">
-					<h2 id="myid"></h2>
 					<h2 id="username"></h2>
+					<h2 id="platformsid"></h2>
+					<h2 id="languagesid"></h2>
+					<h2 id="apisid"></h2>
+					<h2 id="containersid"></h2>
 					<h2>Put something cool here - WOW</h2>
 					<span>And put something almost as cool here, but a bit longer ...</span>
 				</div>
@@ -69,9 +72,25 @@
 					// Request was successful
 					var xml = xhr.responseXML;
 					var data = xml.getElementsByTagName('root')[0];
-                    var firstname = xml.getElementsByTagName('first')[0];
-					document.getElementById('myid').innerHTML = data.textContent;
-					document.getElementById('username').innerHTML = firstname.childNodes[0].nodeValue;
+					var firstname = xml.getElementsByTagName('first')[0];
+					var lastname = xml.getElementsByTagName('last')[0];
+					var name = xml.getElementsByTagName('name')[0];
+
+                    document.getElementById('myid').innerHTML = data.textContent;
+                    document.getElementById('username').innerHTML = name.textContent;
+
+
+					var platforms = xml.getElementsByTagName('platforms')[0];
+                    var languages = xml.getElementsByTagName('languages')[0];
+                    var apis = xml.getElementsByTagName('apis')[0];
+					var containers = xml.getElementsByTagName('containers')[0];
+
+                    document.getElementById('platformsid').innerHTML = platforms.textContent;
+                    document.getElementById('languagesid').innerHTML = languages.textContent;
+                    document.getElementById('apisid').innerHTML = apis.textContent;
+                    document.getElementById('containersid').innerHTML = containers.textContent;
+
+
 					
     //var x2 = xmlDoc.getElementsByTagName('title')[1];
     //var y2 = x2.childNodes[0];
