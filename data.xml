@@ -15,6 +15,7 @@
 			<item>CPP</item>
 			<item>Python</item>
 			<item>C#</item>
+			<item>Java</item>
 		</languages>
 		<apis>
 			<item>rest</item>
